@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://koreal6803.github.io',
   base: '/forest-school-website',
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: true
+    }
   }
 });
