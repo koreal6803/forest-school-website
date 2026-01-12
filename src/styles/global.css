@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Custom CSS Variables for Forest School branding */
+:root {
+  --color-forest-green: #2d5a3d;
+  --color-forest-light: #4a7c5c;
+  --color-forest-dark: #1e3d29;
+  --color-cream: #faf8f5;
+  --color-warm-brown: #8b7355;
+  --color-gold: #c9a962;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn-primary {
+    @apply bg-[#2d5a3d] hover:bg-[#1e3d29] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-[#2d5a3d] text-[#2d5a3d] hover:bg-[#2d5a3d] hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-[#2d5a3d] mb-6;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* Main container - optimized for laptop screens */
+  .container-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Page header style */
+  .page-header {
+    @apply py-16 lg:py-24 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] text-white;
+  }
+
+  /* Section padding */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom fonts */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+}

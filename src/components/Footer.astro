@@ -1,0 +1,127 @@
+---
+interface Props {
+  lang: 'en' | 'fr';
+}
+
+const { lang } = Astro.props;
+
+const translations = {
+  en: {
+    quickLinks: 'Quick Links',
+    programs: 'Programs',
+    contact: 'Contact Us',
+    home: 'Home',
+    about: 'About',
+    admissions: 'Admissions',
+    earlyYears: 'Early Years',
+    primary: 'Primary School',
+    middleSchool: 'Middle School',
+    address: 'Address',
+    phone: 'Phone',
+    email: 'Email',
+    hours: 'Office Hours',
+    hoursText: 'Monday - Friday: 9 AM - 5 PM',
+    copyright: '2024 Forest International School Paris. All rights reserved.',
+    followUs: 'Follow Us'
+  },
+  fr: {
+    quickLinks: 'Liens Rapides',
+    programs: 'Programmes',
+    contact: 'Contactez-nous',
+    home: 'Accueil',
+    about: 'A Propos',
+    admissions: 'Admissions',
+    earlyYears: 'Maternelle',
+    primary: 'Ecole Primaire',
+    middleSchool: 'College',
+    address: 'Adresse',
+    phone: 'Telephone',
+    email: 'Email',
+    hours: 'Heures d\'ouverture',
+    hoursText: 'Lundi - Vendredi: 9h - 17h',
+    copyright: '2024 Forest International School Paris. Tous droits reserves.',
+    followUs: 'Suivez-nous'
+  }
+};
+
+const t = translations[lang];
+const basePath = `/${lang}`;
+---
+
+<footer class="bg-[#2d5a3d] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- School Info -->
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <img src="/images/logo-header.png" alt="Forest International School Logo" class="w-14 h-14 object-contain rounded-full bg-white" />
+          <div>
+            <span class="text-xl font-bold">Forest International</span>
+            <span class="block text-sm text-white/70">School Paris</span>
+          </div>
+        </div>
+        <p class="text-white/80 text-sm leading-relaxed">
+          {lang === 'en'
+            ? 'Nurturing young minds through nature-based learning in the heart of Paris west.'
+            : 'Nourrir les jeunes esprits a travers l\'apprentissage base sur la nature au coeur de l\'ouest parisien.'}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{t.quickLinks}</h3>
+        <ul class="space-y-2">
+          <li><a href={basePath} class="text-white/80 hover:text-white transition-colors">{t.home}</a></li>
+          <li><a href={`${basePath}/about`} class="text-white/80 hover:text-white transition-colors">{t.about}</a></li>
+          <li><a href={`${basePath}/admissions`} class="text-white/80 hover:text-white transition-colors">{t.admissions}</a></li>
+        </ul>
+      </div>
+
+      <!-- Programs -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{t.programs}</h3>
+        <ul class="space-y-2">
+          <li><a href={`${basePath}/early-years`} class="text-white/80 hover:text-white transition-colors">{t.earlyYears}</a></li>
+          <li><a href={`${basePath}/primary`} class="text-white/80 hover:text-white transition-colors">{t.primary}</a></li>
+          <li><a href={`${basePath}/middle-school`} class="text-white/80 hover:text-white transition-colors">{t.middleSchool}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">{t.contact}</h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start space-x-2">
+            <svg class="w-5 h-5 mt-0.5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span class="text-white/80">28 Rue de Tour d'Echelle<br/>78750 Mareil-Marly, France</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span class="text-white/80">+33 1 39 16 87 35</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="text-white/80">infos@forest-international-school.com</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="text-white/80">{t.hoursText}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/60 text-sm">
+      <p>&copy; {t.copyright}</p>
+    </div>
+  </div>
+</footer>
