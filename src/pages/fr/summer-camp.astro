@@ -2,16 +2,63 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Camp d'Ete" lang="fr" description="Clubs de Vacances et Camp d'Ete a Forest International School Paris">
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] text-white py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Programmes de Vacances</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-6">Clubs de Vacances & Camp d'Ete</h1>
-        <p class="text-xl text-white/90">
-          Eveillez la curiosite, la creativite et la connexion avec la nature pendant les vacances scolaires.
+<Layout title="Camp d'Ete" lang="fr" description="Clubs de Vacances et Camp d'Ete a Forest International School Paris - Ouvert a TOUS les enfants!">
+  <!-- Hero Section with Image -->
+  <section class="relative min-h-[60vh] flex items-center">
+    <div class="absolute inset-0">
+      <img
+        src="/images/summer-camp.jpg"
+        alt="Camp d'Ete a Forest International School"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1e3d29]/90 to-[#2d5a3d]/70"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-2xl">
+        <span class="inline-block px-4 py-2 bg-[#c9a962] text-[#1e3d29] rounded-full font-bold text-sm mb-6">
+          ☀️ OUVERT A TOUS LES ENFANTS
+        </span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Camp d'Ete & Clubs de Vacances
+        </h1>
+        <p class="text-xl text-white/90 mb-8">
+          Eveillez la curiosite, la creativite et la connexion avec la nature pendant les vacances scolaires. Aventures pour les 2-12 ans!
         </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#summer-2025" class="inline-flex items-center px-8 py-4 bg-[#c9a962] text-[#1e3d29] font-bold rounded-full hover:bg-[#d4b872] transition-colors shadow-lg">
+            Camp d'Ete 2025
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+          <a href="/fr/contact" class="inline-flex items-center px-8 py-4 bg-white/10 text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/20 transition-colors">
+            Contactez-nous
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Benefits Banner -->
+  <section class="bg-[#c9a962] py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-[#1e3d29]">
+        <div class="flex flex-col items-center">
+          <span class="text-2xl mb-1">🏊</span>
+          <span class="font-semibold text-sm">Piscine</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl mb-1">🌲</span>
+          <span class="font-semibold text-sm">Aventures en Foret</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl mb-1">🍽️</span>
+          <span class="font-semibold text-sm">Dejeuner Inclus</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-2xl mb-1">🌍</span>
+          <span class="font-semibold text-sm">Equipe Bilingue</span>
+        </div>
       </div>
     </div>
   </section>
@@ -20,133 +67,160 @@ import Layout from '../../layouts/Layout.astro';
   <section class="py-16 lg:py-24 bg-[#faf8f5]">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto text-center">
-        <p class="text-gray-600 text-lg leading-relaxed mb-6">
-          Nos Clubs de Vacances et Camp d'Ete sont concus pour eveiller la curiosite, la creativite et la connexion avec la nature. Les enfants profitent du magnifique campus de FISP, de la piscine et de la foret environnante.
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e3d29] mb-6">L'Aventure Vous Attend!</h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+          Nos Clubs de Vacances et Camp d'Ete sont concus pour eveiller la curiosite, la creativite et la connexion avec la nature. Les enfants profitent du magnifique campus de Forest School, de la piscine et de la foret environnante.
         </p>
-        <div class="inline-flex items-center gap-2 px-6 py-3 bg-[#2d5a3d] text-white rounded-full font-semibold">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="inline-flex items-center gap-3 px-8 py-4 bg-[#2d5a3d] text-white rounded-full font-bold text-lg shadow-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
           </svg>
-          Ouvert a TOUS les enfants, pas seulement aux eleves FISP!
+          Ouvert a TOUS les enfants, pas seulement aux eleves Forest School!
         </div>
       </div>
     </div>
   </section>
 
   <!-- Summer Camp 2025 -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="summer-2025" class="py-16 lg:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Programme Vedette</span>
-        <h2 class="section-title mt-2">Camp d'Ete 2025</h2>
-        <p class="text-gray-600 text-lg">Wild Adventures Holiday Club</p>
+        <span class="inline-block px-4 py-2 bg-[#c9a962]/20 rounded-full text-[#c9a962] font-semibold text-sm mb-4">Programme Vedette</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-[#1e3d29] mb-4">Camp d'Ete 2025</h2>
+        <p class="text-gray-600 text-xl">Wild Adventures Holiday Club</p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div class="card border-2 border-[#c9a962]">
-          <h3 class="text-2xl font-bold text-[#2d5a3d] mb-6">Details du Programme</h3>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-              <div><strong>Dates:</strong> 7-25 Juillet 2025</div>
+        <!-- Program Details Card -->
+        <div class="bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] rounded-3xl p-8 lg:p-10 text-white shadow-2xl">
+          <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+            <span class="text-3xl">📅</span> Details du Programme
+          </h3>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white/70 text-sm">Dates</div>
+                <div class="text-xl font-bold">7-25 Juillet 2025</div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <div><strong>Horaires:</strong> Lundi au Vendredi, 10h-17h</div>
+            <li class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white/70 text-sm">Horaires</div>
+                <div class="text-xl font-bold">Lundi - Vendredi, 10h - 17h</div>
+              </div>
             </li>
-            <li class="flex items-start">
-              <svg class="w-6 h-6 text-[#c9a962] mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-              </svg>
-              <div><strong>Ages:</strong> 2 a 12 ans</div>
+            <li class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white/70 text-sm">Ages</div>
+                <div class="text-xl font-bold">2 a 12 ans</div>
+              </div>
             </li>
           </ul>
 
-          <div class="mt-8 pt-6 border-t">
-            <h4 class="font-bold text-[#2d5a3d] mb-4">Tarifs</h4>
-            <div class="space-y-2">
-              <div class="flex justify-between">
-                <span class="text-gray-600">Eleves FISP</span>
-                <span class="font-semibold">95 EUR/jour ou 425 EUR/semaine</span>
+          <div class="mt-10 pt-8 border-t border-white/20">
+            <h4 class="font-bold text-[#c9a962] mb-6 text-lg">💰 Tarifs</h4>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3">
+                <span class="text-white/80">Eleves FISP</span>
+                <span class="font-bold text-lg">95€/jour · 425€/semaine</span>
               </div>
-              <div class="flex justify-between">
-                <span class="text-gray-600">Non-FISP</span>
-                <span class="font-semibold">100 EUR/jour ou 450 EUR/semaine</span>
+              <div class="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3">
+                <span class="text-white/80">Non-FISP</span>
+                <span class="font-bold text-lg">100€/jour · 450€/semaine</span>
               </div>
             </div>
-            <p class="text-sm text-gray-500 mt-4">Inclus: Dejeuner chaud, collations et materiel</p>
-            <p class="text-sm text-[#c9a962] font-semibold mt-2">Reduction early bird pour inscription avant le 1er juin!</p>
+            <p class="text-white/70 text-sm mt-4">✓ Inclus: Dejeuner chaud, collations et materiel</p>
+            <div class="mt-6 bg-[#c9a962] text-[#1e3d29] rounded-xl px-4 py-3 font-bold text-center">
+              🎉 Reduction early bird pour inscription avant le 1er juin!
+            </div>
           </div>
         </div>
 
+        <!-- Activities -->
         <div>
-          <h3 class="text-2xl font-bold text-[#2d5a3d] mb-6">Activites Incluses</h3>
+          <h3 class="text-2xl font-bold text-[#1e3d29] mb-8 flex items-center gap-3">
+            <span class="text-3xl">🎯</span> Activites Incluses
+          </h3>
           <div class="grid grid-cols-2 gap-4">
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Sports de Ballon</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">⚽</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Sports de Ballon</p>
             </div>
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Arts & Bricolage</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">🎨</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Arts & Bricolage</p>
             </div>
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Natation</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">🏊</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Natation</p>
             </div>
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Cuisine</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">👨‍🍳</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Cuisine</p>
             </div>
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Sorties en Foret</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">🌲</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Sorties en Foret</p>
             </div>
-            <div class="card text-center">
-              <p class="font-semibold text-[#2d5a3d]">Cueillette de Fruits</p>
+            <div class="bg-[#faf8f5] rounded-2xl p-6 text-center hover:shadow-lg transition-shadow">
+              <div class="w-14 h-14 bg-[#2d5a3d]/10 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span class="text-2xl">🍎</span>
+              </div>
+              <p class="font-bold text-[#1e3d29]">Cueillette de Fruits</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Other Holiday Clubs -->
-  <section class="py-16 lg:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-[#c9a962] font-semibold text-sm uppercase tracking-wider">Toute l'Annee</span>
-        <h2 class="section-title mt-2">Autres Clubs de Vacances</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Club de Noel</h3>
-          <p class="text-gray-600 mb-4">15-19 Decembre 2025</p>
-          <p class="text-sm text-gray-500">Ages 2-12 | Activites festives</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Club d'Hiver</h3>
-          <p class="text-gray-600 mb-4">23-27 Fevrier 2026</p>
-          <p class="text-sm text-gray-500">Ages 2-12 | Options interieures confortables</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold text-[#2d5a3d] mb-3">Club de Paques</h3>
-          <p class="text-gray-600 mb-4">13-24 Avril 2026</p>
-          <p class="text-sm text-gray-500">Ages 2-12 | Aventures de printemps dans la foret</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-16 lg:py-24 bg-[#2d5a3d]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Inscrivez-vous Aujourd'hui</h2>
-      <p class="text-white/80 text-lg mb-8">
-        Les places sont limitees! Contactez-nous pour inscrire votre enfant.
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-[#2d5a3d] to-[#1e3d29] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <span class="text-6xl mb-6 block">☀️</span>
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Inscrivez-vous Aujourd'hui!</h2>
+      <p class="text-white/80 text-xl mb-10 max-w-2xl mx-auto">
+        Les places sont limitees! Contactez-nous pour inscrire votre enfant a nos Camps de Vacances.
       </p>
-      <a href="/fr/contact" class="bg-white text-[#2d5a3d] font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-        Contactez-nous pour l'Inscription
-      </a>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/fr/contact" class="inline-flex items-center justify-center px-10 py-5 bg-[#c9a962] text-[#1e3d29] font-bold text-lg rounded-full hover:bg-[#d4b872] transition-colors shadow-xl">
+          Contactez-nous pour l'Inscription
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        <a href="/fr/contact" class="inline-flex items-center justify-center px-10 py-5 bg-white/10 text-white font-bold text-lg rounded-full border-2 border-white/30 hover:bg-white/20 transition-colors">
+          Planifier une Visite
+        </a>
+      </div>
     </div>
   </section>
 </Layout>

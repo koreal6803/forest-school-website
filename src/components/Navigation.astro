@@ -8,7 +8,8 @@ const { lang } = Astro.props;
 const translations = {
   en: {
     home: 'Home',
-    about: 'About',
+    aboutUs: 'About Us',
+    about: 'About the School',
     team: 'Our Team',
     programs: 'Programs',
     earlyYears: 'Early Years (2-5)',
@@ -22,11 +23,12 @@ const translations = {
     langSwitch: 'Francais',
     applyNow: 'Book a Visit',
     phone: '+33 1 39 16 87 35',
-    email: 'infos@forest-international-school.com'
+    email: 'discover@forestinternationalschool.com'
   },
   fr: {
     home: 'Accueil',
-    about: 'A Propos',
+    aboutUs: 'A Propos',
+    about: 'Notre Ecole',
     team: 'Notre Equipe',
     programs: 'Programmes',
     earlyYears: 'Maternelle (2-5)',
@@ -40,7 +42,7 @@ const translations = {
     langSwitch: 'English',
     applyNow: 'Reserver une Visite',
     phone: '+33 1 39 16 87 35',
-    email: 'infos@forest-international-school.com'
+    email: 'discover@forestinternationalschool.com'
   }
 };
 
@@ -100,8 +102,40 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
       <div class="hidden lg:flex items-center">
         <div class="flex items-center gap-1">
           <a href={basePath} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.home}</a>
-          <a href={`${basePath}/about`} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.about}</a>
-          <a href={`${basePath}/team`} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.team}</a>
+
+          <!-- About Us Dropdown -->
+          <div class="relative group">
+            <button class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors flex items-center gap-1 rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">
+              {t.aboutUs}
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div class="w-56 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden p-2">
+                <a href={`${basePath}/about`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#2d5a3d]/10 hover:to-transparent rounded-xl transition-all group/item">
+                  <div class="w-10 h-10 bg-[#2d5a3d]/10 rounded-xl flex items-center justify-center group-hover/item:bg-[#2d5a3d]/20 transition-colors">
+                    <svg class="w-5 h-5 text-[#2d5a3d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-[#1e3d29]">{t.about}</div>
+                  </div>
+                </a>
+                <a href={`${basePath}/team`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-[#2d5a3d]/10 hover:to-transparent rounded-xl transition-all group/item">
+                  <div class="w-10 h-10 bg-[#c9a962]/20 rounded-xl flex items-center justify-center group-hover/item:bg-[#c9a962]/30 transition-colors">
+                    <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="font-semibold text-[#1e3d29]">{t.team}</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
 
           <!-- Programs Dropdown -->
           <div class="relative group">
@@ -157,6 +191,9 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
             </div>
           </div>
 
+          <a href={`${basePath}/summer-camp`} class="px-4 py-2 text-[#c9a962] hover:text-[#b8963d] font-semibold transition-colors rounded-lg hover:bg-[#c9a962]/10 whitespace-nowrap flex items-center gap-1">
+            <span>☀️</span> {t.summerCamp}
+          </a>
           <a href={`${basePath}/admissions`} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.admissions}</a>
           <a href={`${basePath}/tuition`} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.tuition}</a>
           <a href={newsPath} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.news}</a>
@@ -189,11 +226,19 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
   </div>
 
   <!-- Mobile Navigation -->
-  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 max-h-[calc(100vh-5rem)] overflow-y-auto">
     <div class="max-w-6xl mx-auto px-4 py-4 space-y-1">
       <a href={basePath} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.home}</a>
-      <a href={`${basePath}/about`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.about}</a>
-      <a href={`${basePath}/team`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.team}</a>
+
+      <div class="py-2">
+        <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-4 mb-2">{t.aboutUs}</div>
+        <a href={`${basePath}/about`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
+          <span>🏫</span> {t.about}
+        </a>
+        <a href={`${basePath}/team`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
+          <span>👥</span> {t.team}
+        </a>
+      </div>
 
       <div class="py-2">
         <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider px-4 mb-2">{t.programs}</div>
@@ -211,6 +256,9 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
         </a>
       </div>
 
+      <a href={`${basePath}/summer-camp`} class="flex items-center gap-3 px-4 py-3 text-[#c9a962] hover:bg-[#c9a962]/10 rounded-xl font-semibold border border-[#c9a962]/30">
+        <span>☀️</span> {t.summerCamp}
+      </a>
       <a href={`${basePath}/admissions`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.admissions}</a>
       <a href={`${basePath}/tuition`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.tuition}</a>
       <a href={newsPath} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.news}</a>

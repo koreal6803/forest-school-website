@@ -20,7 +20,8 @@ const translations = {
     phone: 'Phone',
     email: 'Email',
     hours: 'Office Hours',
-    hoursText: 'Monday - Friday: 9 AM - 5 PM',
+    hoursText: 'Office Hours: 7:30 AM - 6:30 PM',
+    schoolDay: 'School Day: 8:30 AM - 5:00 PM',
     copyright: '2024 Forest International School Paris. All rights reserved.',
     followUs: 'Follow Us'
   },
@@ -38,7 +39,8 @@ const translations = {
     phone: 'Telephone',
     email: 'Email',
     hours: 'Heures d\'ouverture',
-    hoursText: 'Lundi - Vendredi: 9h - 17h',
+    hoursText: 'Heures d\'ouverture: 7h30 - 18h30',
+    schoolDay: 'Journee scolaire: 8h30 - 17h',
     copyright: '2024 Forest International School Paris. Tous droits reserves.',
     followUs: 'Suivez-nous'
   }
@@ -108,13 +110,13 @@ const basePath = `/${lang}`;
             <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span class="text-white/80">infos@forest-international-school.com</span>
+            <span class="text-white/80">discover@forestinternationalschool.com</span>
           </li>
           <li class="flex items-center space-x-2">
             <svg class="w-5 h-5 text-[#c9a962]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <span class="text-white/80">{t.hoursText}</span>
+            <span class="text-white/80">{t.hoursText}<br/>{t.schoolDay}</span>
           </li>
         </ul>
       </div>
