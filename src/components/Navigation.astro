@@ -17,7 +17,7 @@ const translations = {
     middleSchool: 'Middle School (11-14)',
     admissions: 'Admissions',
     tuition: 'Tuition',
-    summerCamp: 'Summer Camp',
+    summerCamp: 'Holiday Camps',
     news: 'News',
     contact: 'Contact',
     langSwitch: 'Francais',
@@ -36,7 +36,7 @@ const translations = {
     middleSchool: 'College (11-14)',
     admissions: 'Admissions',
     tuition: 'Tarifs',
-    summerCamp: 'Camp d\'Ete',
+    summerCamp: 'Camps de Vacances',
     news: 'Actualites',
     contact: 'Contact',
     langSwitch: 'English',
@@ -177,7 +177,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
                   </a>
                 </div>
                 <div class="border-t border-gray-100 p-2 bg-[#faf8f5]">
-                  <a href={`${basePath}/summer-camp`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-white rounded-xl transition-all group/item">
+                  <a href={`${basePath}/holiday-camps`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-white rounded-xl transition-all group/item">
                     <div class="w-10 h-10 bg-[#c9a962]/30 rounded-xl flex items-center justify-center">
                       <span class="text-lg">☀️</span>
                     </div>
@@ -191,7 +191,7 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
             </div>
           </div>
 
-          <a href={`${basePath}/summer-camp`} class="px-4 py-2 text-[#c9a962] hover:text-[#b8963d] font-semibold transition-colors rounded-lg hover:bg-[#c9a962]/10 whitespace-nowrap flex items-center gap-1">
+          <a href={`${basePath}/holiday-camps`} class="px-4 py-2 text-[#c9a962] hover:text-[#b8963d] font-semibold transition-colors rounded-lg hover:bg-[#c9a962]/10 whitespace-nowrap flex items-center gap-1">
             <span>☀️</span> {t.summerCamp}
           </a>
           <a href={`${basePath}/admissions`} class="px-4 py-2 text-gray-600 hover:text-[#2d5a3d] font-medium transition-colors rounded-lg hover:bg-[#2d5a3d]/5 whitespace-nowrap">{t.admissions}</a>
@@ -251,12 +251,12 @@ const newsPath = lang === 'en' ? `${basePath}/news` : `${basePath}/actualites`;
         <a href={`${basePath}/middle-school`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl">
           <span>🏔️</span> {t.middleSchool}
         </a>
-        <a href={`${basePath}/summer-camp`} class="flex items-center gap-3 px-4 py-3 text-[#c9a962] hover:bg-[#c9a962]/10 rounded-xl font-medium">
+        <a href={`${basePath}/holiday-camps`} class="flex items-center gap-3 px-4 py-3 text-[#c9a962] hover:bg-[#c9a962]/10 rounded-xl font-medium">
           <span>☀️</span> {t.summerCamp}
         </a>
       </div>
 
-      <a href={`${basePath}/summer-camp`} class="flex items-center gap-3 px-4 py-3 text-[#c9a962] hover:bg-[#c9a962]/10 rounded-xl font-semibold border border-[#c9a962]/30">
+      <a href={`${basePath}/holiday-camps`} class="flex items-center gap-3 px-4 py-3 text-[#c9a962] hover:bg-[#c9a962]/10 rounded-xl font-semibold border border-[#c9a962]/30">
         <span>☀️</span> {t.summerCamp}
       </a>
       <a href={`${basePath}/admissions`} class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-[#2d5a3d]/5 rounded-xl font-medium">{t.admissions}</a>
